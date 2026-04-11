@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L&L — Catalogo de Produtos</title>
+<title>L&L — Personalizados &amp; Impressao 3D</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -33,7 +33,7 @@
   body.intro-active { overflow: hidden; }
 
   /* NAV */
-  nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(10,10,10,.92); backdrop-filter: blur(20px); border: 1px solid rgba(201,169,110,.25); border-radius: 60px; padding: 12px 32px; display: flex; align-items: center; gap: 40px; box-shadow: 0 8px 40px rgba(0,0,0,.25); animation: navSlide .8s cubic-bezier(.16,1,.3,1) both; width: min(90vw, 820px); justify-content: space-between; }
+  nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(10,10,10,.92); backdrop-filter: blur(20px); border: 1px solid rgba(201,169,110,.25); border-radius: 60px; padding: 12px 32px; display: flex; align-items: center; gap: 40px; box-shadow: 0 8px 40px rgba(0,0,0,.25); animation: navSlide .8s cubic-bezier(.16,1,.3,1) both; width: min(90vw, 860px); justify-content: space-between; }
   @keyframes navSlide { from { opacity: 0; transform: translateX(-50%) translateY(-20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.5rem; color: var(--gold); letter-spacing: .05em; white-space: nowrap; }
   .nav-links { display: flex; gap: 28px; align-items: center; }
@@ -76,9 +76,9 @@
   /* CATEGORIAS */
   .categories-section { background: var(--black); color: var(--white); }
   .categories-section .section-title { color: var(--white); }
-  .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2px; max-width: 1200px; margin: 0 auto; }
+  .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 2px; max-width: 1200px; margin: 0 auto; }
   .cat-card { position: relative; overflow: hidden; aspect-ratio: 3/4; background: #111; cursor: none; }
-  .cat-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,.1) 60%); z-index: 1; transition: opacity .4s; }
+  .cat-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.1) 60%); z-index: 1; transition: opacity .4s; }
   .cat-card:hover::before { opacity: .5; }
   .cat-bg { position: absolute; inset: 0; transition: transform .6s cubic-bezier(.16,1,.3,1); }
   .cat-card:hover .cat-bg { transform: scale(1.08); }
@@ -86,12 +86,13 @@
   .cat-bg-2 { background: linear-gradient(135deg,#0d1a0d,#1a3a1a,#0d1a0d); }
   .cat-bg-3 { background: linear-gradient(135deg,#0d0d1a,#1a1a3a,#0d0d1a); }
   .cat-bg-4 { background: linear-gradient(135deg,#1a0d0d,#3a1a1a,#1a0d0d); }
+  .cat-bg-5 { background: linear-gradient(135deg,#1a1a0d,#3a3a1a,#1a1a0d); }
   .cat-icon { position: absolute; inset: 0; z-index: 1; display: flex; align-items: center; justify-content: center; font-size: 5rem; opacity: .12; transition: all .4s; }
   .cat-card:hover .cat-icon { opacity: .2; transform: scale(1.1); }
-  .cat-info { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 32px 24px 28px; transform: translateY(8px); transition: transform .4s cubic-bezier(.16,1,.3,1); }
+  .cat-info { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 28px 20px 24px; transform: translateY(8px); transition: transform .4s cubic-bezier(.16,1,.3,1); }
   .cat-card:hover .cat-info { transform: translateY(0); }
-  .cat-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 6px; }
-  .cat-count { font-size: .62rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
+  .cat-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+  .cat-count { font-size: .58rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
 
   /* PRODUTOS */
   .products-section { background: var(--white); }
@@ -103,11 +104,11 @@
   @keyframes cardReveal { to { opacity: 1; transform: translateY(0); } }
   .product-card:hover { transform: translateY(-8px); box-shadow: 0 30px 80px rgba(0,0,0,.12); }
   .product-img-wrap { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--light-gray); }
-  .product-img { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; transition: transform .6s cubic-bezier(.16,1,.3,1); }
+  .product-img { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem; transition: transform .6s cubic-bezier(.16,1,.3,1); }
   .product-card:hover .product-img { transform: scale(1.08); }
   .product-badge { position: absolute; top: 16px; left: 16px; background: var(--black); color: var(--white); font-size: .58rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; padding: 5px 12px; border-radius: 2px; }
   .product-badge.gold { background: var(--gold); color: var(--black); }
-  .product-actions { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(10,10,10,.85), transparent); display: flex; gap: 8px; transform: translateY(100%); transition: transform .4s cubic-bezier(.16,1,.3,1); }
+  .product-actions { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(10,10,10,.9), transparent); display: flex; gap: 8px; transform: translateY(100%); transition: transform .4s cubic-bezier(.16,1,.3,1); }
   .product-card:hover .product-actions { transform: translateY(0); }
   .btn-action { flex: 1; padding: 11px; font-family: 'Montserrat', sans-serif; font-size: .62rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; border: none; border-radius: 2px; cursor: none; transition: all .3s; }
   .btn-action.primary { background: var(--gold); color: var(--black); }
@@ -116,12 +117,10 @@
   .btn-action.secondary:hover { background: rgba(255,255,255,.25); }
   .product-info { padding: 20px 22px 24px; }
   .product-cat { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
-  .product-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--black); margin-bottom: 6px; line-height: 1.2; }
+  .product-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--black); margin-bottom: 8px; line-height: 1.2; }
   .product-desc { font-size: .72rem; color: var(--gray); line-height: 1.6; margin-bottom: 16px; }
   .product-footer { display: flex; align-items: center; justify-content: space-between; }
-  .product-price { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--black); }
-  .product-price span { font-size: .8rem; font-weight: 300; }
-  .product-stars { font-size: .7rem; color: var(--gold); letter-spacing: 2px; }
+  .product-tag { font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold); padding: 4px 10px; border-radius: 20px; }
 
   /* BANNER */
   .banner-section { background: var(--black); padding: 100px 40px; position: relative; overflow: hidden; }
@@ -192,16 +191,17 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-logo-wrap">
     <div class="hero-logo">L<span>&amp;</span>L</div>
   </div>
-  <p class="hero-tagline">Qualidade que transforma o cotidiano</p>
-  <p class="hero-sub">Catalogo Exclusivo de Produtos</p>
+  <p class="hero-tagline">Criatividade que ganha forma</p>
+  <p class="hero-sub">Personalizados &amp; Impressao 3D</p>
   <a href="#produtos" class="hero-cta">
-    Explorar Catalogo
+    Ver Catalogo
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -212,20 +212,58 @@
   </div>
 </section>
 
+<!-- CATEGORIAS -->
 <section class="section categories-section" id="categorias">
   <div class="section-header reveal">
-    <span class="section-label">Nossas Linhas</span>
-    <h2 class="section-title">Categorias em Destaque</h2>
+    <span class="section-label">O que fazemos</span>
+    <h2 class="section-title">Nossas Categorias</h2>
     <div class="section-line"></div>
   </div>
   <div class="categories-grid reveal">
-    <div class="cat-card"><div class="cat-bg cat-bg-1"></div><div class="cat-icon">&#10024;</div><div class="cat-info"><div class="cat-name">Premium</div><div class="cat-count">18 produtos</div></div></div>
-    <div class="cat-card"><div class="cat-bg cat-bg-2"></div><div class="cat-icon">&#127807;</div><div class="cat-info"><div class="cat-name">Natural</div><div class="cat-count">24 produtos</div></div></div>
-    <div class="cat-card"><div class="cat-bg cat-bg-3"></div><div class="cat-icon">&#128142;</div><div class="cat-info"><div class="cat-name">Exclusivo</div><div class="cat-count">12 produtos</div></div></div>
-    <div class="cat-card"><div class="cat-bg cat-bg-4"></div><div class="cat-icon">&#128293;</div><div class="cat-info"><div class="cat-name">Promocao</div><div class="cat-count">9 produtos</div></div></div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-1"></div>
+      <div class="cat-icon">&#128424;</div>
+      <div class="cat-info">
+        <div class="cat-name">Impressao 3D</div>
+        <div class="cat-count">Pecas sob medida</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-2"></div>
+      <div class="cat-icon">&#128717;</div>
+      <div class="cat-info">
+        <div class="cat-name">Sacolas Personalizadas</div>
+        <div class="cat-count">Sua marca em destaque</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-3"></div>
+      <div class="cat-icon">&#128085;</div>
+      <div class="cat-info">
+        <div class="cat-name">Camisetas Personalizadas</div>
+        <div class="cat-count">Estampas exclusivas</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-4"></div>
+      <div class="cat-icon">&#9749;</div>
+      <div class="cat-info">
+        <div class="cat-name">Canecas Personalizadas</div>
+        <div class="cat-count">Para brindes e presentes</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-5"></div>
+      <div class="cat-icon">&#127381;</div>
+      <div class="cat-info">
+        <div class="cat-name">E muito mais!</div>
+        <div class="cat-count">Fale conosco</div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- PRODUTOS -->
 <section class="section products-section" id="produtos">
   <div class="section-header reveal">
     <span class="section-label">Nosso Portfolio</span>
@@ -234,49 +272,219 @@
   </div>
   <div class="filters reveal">
     <button class="filter-btn active" onclick="filterProducts('todos',this)">Todos</button>
-    <button class="filter-btn" onclick="filterProducts('premium',this)">Premium</button>
-    <button class="filter-btn" onclick="filterProducts('natural',this)">Natural</button>
-    <button class="filter-btn" onclick="filterProducts('exclusivo',this)">Exclusivo</button>
-    <button class="filter-btn" onclick="filterProducts('promocao',this)">Promocao</button>
+    <button class="filter-btn" onclick="filterProducts('3d',this)">Impressao 3D</button>
+    <button class="filter-btn" onclick="filterProducts('sacola',this)">Sacolas</button>
+    <button class="filter-btn" onclick="filterProducts('camiseta',this)">Camisetas</button>
+    <button class="filter-btn" onclick="filterProducts('caneca',this)">Canecas</button>
+    <button class="filter-btn" onclick="filterProducts('outros',this)">Outros</button>
   </div>
   <div class="products-grid">
-    <div class="product-card" data-cat="premium" style="animation-delay:.05s">
-      <div class="product-img-wrap"><div class="product-img">&#127942;</div><div class="product-badge gold">Premium</div><div class="product-actions"><button class="btn-action primary">Solicitar</button><button class="btn-action secondary">Detalhes</button></div></div>
-      <div class="product-info"><span class="product-cat">Premium</span><div class="product-name">Colecao Signature</div><p class="product-desc">Peca exclusiva com acabamento artesanal e materiais selecionados.</p><div class="product-footer"><div class="product-price"><span>R$</span> 1.299</div><div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+
+    <div class="product-card" data-cat="3d" style="animation-delay:.05s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#128424;</div>
+        <div class="product-badge gold">Impressao 3D</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Impressao 3D - Peca Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Impressao 3D - Peca Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Impressao 3D</span>
+        <div class="product-name">Peca Personalizada 3D</div>
+        <p class="product-desc">Criamos qualquer peca em 3D com precisao e qualidade. Ideal para prototipos, decoracao e brindes corporativos.</p>
+        <div class="product-footer">
+          <div class="product-tag">Sob consulta</div>
+        </div>
+      </div>
     </div>
-    <div class="product-card" data-cat="natural" style="animation-delay:.1s">
-      <div class="product-img-wrap"><div class="product-img">&#127807;</div><div class="product-badge">Natural</div><div class="product-actions"><button class="btn-action primary">Solicitar</button><button class="btn-action secondary">Detalhes</button></div></div>
-      <div class="product-info"><span class="product-cat">Natural</span><div class="product-name">Linha Organica</div><p class="product-desc">Formulacao 100% natural, certificada e sustentavel.</p><div class="product-footer"><div class="product-price"><span>R$</span> 289</div><div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+
+    <div class="product-card" data-cat="3d" style="animation-delay:.1s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#127963;</div>
+        <div class="product-badge">Impressao 3D</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Impressao 3D - Miniatura e Maquete')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Impressao 3D - Miniatura e Maquete')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Impressao 3D</span>
+        <div class="product-name">Miniaturas e Maquetes</div>
+        <p class="product-desc">Reproducoes em escala para projetos arquitetonicos, colecoes e uso educacional com alto nivel de detalhe.</p>
+        <div class="product-footer">
+          <div class="product-tag">Sob consulta</div>
+        </div>
+      </div>
     </div>
-    <div class="product-card" data-cat="exclusivo" style="animation-delay:.15s">
-      <div class="product-img-wrap"><div class="product-img">&#128142;</div><div class="product-badge gold">Exclusivo</div><div class="product-actions"><button class="btn-action primary">Solicitar</button><button class="btn-action secondary">Detalhes</button></div></div>
-      <div class="product-info"><span class="product-cat">Exclusivo</span><div class="product-name">Edicao Limitada</div><p class="product-desc">Peca numerada, disponivel apenas para clientes VIP.</p><div class="product-footer"><div class="product-price"><span>R$</span> 2.890</div><div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+
+    <div class="product-card" data-cat="sacola" style="animation-delay:.15s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#128717;</div>
+        <div class="product-badge gold">Sacolas</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Sacola Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Sacola Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Sacolas</span>
+        <div class="product-name">Sacola Personalizada</div>
+        <p class="product-desc">Sacolas com a sua logo e identidade visual. Perfeitas para presentear clientes e fortalecer sua marca.</p>
+        <div class="product-footer">
+          <div class="product-tag">Pedido minimo</div>
+        </div>
+      </div>
     </div>
-    <div class="product-card" data-cat="promocao" style="animation-delay:.2s">
-      <div class="product-img-wrap"><div class="product-img">&#128293;</div><div class="product-badge">-30%</div><div class="product-actions"><button class="btn-action primary">Solicitar</button><button class="btn-action secondary">Detalhes</button></div></div>
-      <div class="product-info"><span class="product-cat">Promocao</span><div class="product-name">Kit Essencial</div><p class="product-desc">Kit completo com os itens mais vendidos da temporada.</p><div class="product-footer"><div class="product-price"><span>R$</span> 499</div><div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div></div></div>
+
+    <div class="product-card" data-cat="sacola" style="animation-delay:.2s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#127920;</div>
+        <div class="product-badge">Sacolas</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Sacola Kraft Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Sacola Kraft Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Sacolas</span>
+        <div class="product-name">Sacola Kraft</div>
+        <p class="product-desc">Sacolas ecologicas de papel kraft personalizadas com logotipo e artes exclusivas para o seu negocio.</p>
+        <div class="product-footer">
+          <div class="product-tag">Pedido minimo</div>
+        </div>
+      </div>
     </div>
-    <div class="product-card" data-cat="premium" style="animation-delay:.25s">
-      <div class="product-img-wrap"><div class="product-img">&#128081;</div><div class="product-badge gold">Premium</div><div class="product-actions"><button class="btn-action primary">Solicitar</button><button class="btn-action secondary">Detalhes</button></div></div>
-      <div class="product-info"><span class="product-cat">Premium</span><div class="product-name">Royal Collection</div><p class="product-desc">A sofisticacao maxima para quem exige o melhor.</p><div class="product-footer"><div class="product-price"><span>R$</span> 3.499</div><div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+
+    <div class="product-card" data-cat="camiseta" style="animation-delay:.25s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#128085;</div>
+        <div class="product-badge gold">Camisetas</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Camiseta Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Camiseta Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Camisetas</span>
+        <div class="product-name">Camiseta Personalizada</div>
+        <p class="product-desc">Estampas de alta qualidade com sua arte, logo ou frase. Para uniformes, eventos e presentes unicos.</p>
+        <div class="product-footer">
+          <div class="product-tag">A partir de 1 un.</div>
+        </div>
+      </div>
     </div>
-    <div class="product-card" data-cat="natural" style="animation-delay:.3s">
-      <div class="product-img-wrap"><div class="product-img">&#127800;</div><div class="product-badge">Natural</div><div class="product-actions"><button class="btn-action primary">Solicitar</button><button class="btn-action secondary">Detalhes</button></div></div>
-      <div class="product-info"><span class="product-cat">Natural</span><div class="product-name">Floral Essencia</div><p class="product-desc">Extratos florais puros para um ritual de cuidado unico.</p><div class="product-footer"><div class="product-price"><span>R$</span> 389</div><div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+
+    <div class="product-card" data-cat="camiseta" style="animation-delay:.3s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#127829;</div>
+        <div class="product-badge">Camisetas</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Camiseta Uniforme Corporativo')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Camiseta Uniforme Corporativo')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Camisetas</span>
+        <div class="product-name">Uniforme Corporativo</div>
+        <p class="product-desc">Camisetas e uniformes para equipes e empresas com padronizacao visual e acabamento profissional.</p>
+        <div class="product-footer">
+          <div class="product-tag">Pedido minimo</div>
+        </div>
+      </div>
     </div>
+
+    <div class="product-card" data-cat="caneca" style="animation-delay:.35s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#9749;</div>
+        <div class="product-badge gold">Canecas</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Caneca Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Caneca Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Canecas</span>
+        <div class="product-name">Caneca Personalizada</div>
+        <p class="product-desc">Canecas de ceramica com estampa completa ou parcial. Excelente opcao para brindes e presentes corporativos.</p>
+        <div class="product-footer">
+          <div class="product-tag">A partir de 1 un.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="caneca" style="animation-delay:.4s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#128167;</div>
+        <div class="product-badge">Canecas</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Caneca Magica Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Caneca Magica Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Canecas</span>
+        <div class="product-name">Caneca Magica</div>
+        <p class="product-desc">A imagem aparece quando a caneca e aquecida. Surpresa garantida para presentear de forma criativa e especial.</p>
+        <div class="product-footer">
+          <div class="product-tag">A partir de 1 un.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="outros" style="animation-delay:.45s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#128218;</div>
+        <div class="product-badge gold">Outros</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Caderno e Agenda Personalizada')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Caderno e Agenda Personalizada')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Outros</span>
+        <div class="product-name">Cadernos e Agendas</div>
+        <p class="product-desc">Cadernos e agendas com capa personalizada para sua empresa, eventos ou uso pessoal.</p>
+        <div class="product-footer">
+          <div class="product-tag">Sob consulta</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="outros" style="animation-delay:.5s">
+      <div class="product-img-wrap">
+        <div class="product-img">&#127381;</div>
+        <div class="product-badge">Outros</div>
+        <div class="product-actions">
+          <button class="btn-action primary" onclick="irWhatsApp('Produto Personalizado - Outro')">Solicitar</button>
+          <button class="btn-action secondary" onclick="irWhatsApp('Produto Personalizado - Outro')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Outros</span>
+        <div class="product-name">Outros Personalizados</div>
+        <p class="product-desc">Chaveiros, mousepad, placas, bottons, brindes corporativos e muito mais. Entre em contato e solicite um orcamento!</p>
+        <div class="product-footer">
+          <div class="product-tag">Consulte-nos</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- BANNER -->
 <section class="banner-section">
   <div class="banner-decor">L&amp;L</div>
   <div class="banner-inner reveal">
-    <span class="banner-label">Oferta Especial</span>
-    <h2 class="banner-title">Pecas <em>unicas</em><br>para momentos unicos</h2>
-    <p class="banner-text">Cada produto L&amp;L e desenvolvido com rigor tecnico e cuidado artesanal, para quem valoriza qualidade acima de tudo.</p>
-    <a href="#contato" class="banner-cta">Entrar em Contato</a>
+    <span class="banner-label">Faca um orcamento</span>
+    <h2 class="banner-title">Sua ideia ganha <em>vida</em><br>com a gente</h2>
+    <p class="banner-text">Temos a solucao certa para personalizar produtos com a identidade da sua marca ou o estilo que voce imaginar. Atendimento rapido e orcamento sem compromisso.</p>
+    <a href="https://wa.me/5516992955432?text=Ola!%20Gostaria%20de%20solicitar%20um%20orcamento." target="_blank" class="banner-cta">Pedir Orcamento no WhatsApp</a>
   </div>
 </section>
 
+<!-- CONTATO -->
 <section class="contact-section" id="contato">
   <div class="section-header reveal">
     <span class="section-label">Fale Conosco</span>
@@ -321,7 +529,7 @@
 
 <footer>
   <p>
-    &copy; 2025 <strong>L&amp;L</strong> &mdash; Todos os direitos reservados &nbsp;|&nbsp;
+    &copy; 2025 <strong>L&amp;L</strong> &mdash; Personalizados &amp; Impressao 3D &nbsp;|&nbsp;
     <a href="tel:+5516992955432">(16) 99295-5432</a> &nbsp;|&nbsp;
     <a href="mailto:cyberleon14@gmail.com">cyberleon14@gmail.com</a>
   </p>
@@ -371,6 +579,12 @@
     entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+
+  /* WHATSAPP - botoes dos produtos */
+  function irWhatsApp(produto){
+    var texto = 'Ola! Tenho interesse em: ' + produto + '. Gostaria de um orcamento.';
+    window.open('https://wa.me/5516992955432?text=' + encodeURIComponent(texto), '_blank');
+  }
 
   /* FILTER */
   function filterProducts(cat, btn){
